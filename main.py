@@ -1,9 +1,12 @@
+from environs import Env
 from defenation import diction
 from googletrans import Translator
 from aiogram import types, Bot, Dispatcher, executor
 
+env = Env()
+env.read_env()
 
-token = '6409037275:AAHUbS5I0hnR0avb1DiQ3dyeGKekvbqNJTE'
+token = env.str('TOKEN')
 bot = Bot(token=token)
 dp = Dispatcher(bot=bot)
 
