@@ -16,3 +16,4 @@ def diction(word):
             definitions1.append(f"👉 {meanings[i]['definition']}")
         output["definitions"] = '\n'.join(definitions1)
         return output
+        
